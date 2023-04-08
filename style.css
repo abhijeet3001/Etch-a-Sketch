@@ -1,0 +1,11 @@
+.square{
+  height: 25px;
+  width: 25px;
+  background-color: #555;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  gap: 1px;
+}

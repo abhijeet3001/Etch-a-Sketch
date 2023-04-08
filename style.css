@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: #a8a0e259;
+}
 .square {
   height: 25px;
   width: 25px;
@@ -13,9 +18,9 @@
   width: 500px;
   border: solid 4px;
 }
-.top{
+.top {
   border-top: solid 1px black;
 }
-.right{
+.right {
   border-right: solid 1px black;
 }

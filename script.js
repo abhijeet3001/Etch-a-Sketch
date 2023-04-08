@@ -4,7 +4,7 @@ let gridSize = 16;
 for (let i = 0; i < gridSize * gridSize; i++) {
   const sq = document.createElement("div");
   sq.classList.add("square");
-  sq.setAttribute("id", i);
+  sq.setAttribute("id", `b${i}`);
   if (i < gridSize) sq.classList.add("top");
   if (i % gridSize == gridSize - 1) sq.classList.add("right");
   container.appendChild(sq);

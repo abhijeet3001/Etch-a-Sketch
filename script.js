@@ -16,3 +16,10 @@ squares.forEach((square) => {
   square.style.width = side + "px";
   square.style.height = side + "px";
 });
+
+function addColor(e) {
+  console.log(e.target.id);
+  const box = document.querySelector(`#${e.target.id}`);
+  box.style.backgroundColor = "black";
+}
+squares.forEach((square) => square.addEventListener("mouseover", addColor));

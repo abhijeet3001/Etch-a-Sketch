@@ -42,10 +42,15 @@ function getGridSize() {
   createGrid(gridSize);
 }
 
+function clearGrid() {
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((square) => (square.style.backgroundColor = "white"));
+}
+
 function clickButton(e) {
   if (e.target.id === "grid") getGridSize();
   if (e.target.id === "color") getColor();
-  if (e.target.id === "clear") clearCells();
+  if (e.target.id === "clear") clearGrid();
 }
 
 const btn = document.querySelectorAll(".btn");

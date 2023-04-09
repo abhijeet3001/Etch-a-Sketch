@@ -23,3 +23,15 @@ function addColor(e) {
   box.style.backgroundColor = "black";
 }
 squares.forEach((square) => square.addEventListener("mouseover", addColor));
+
+function getGridSize(){
+  let newGridSize=prompt("Enter a new size of Grid");
+  gridSize=newGridSize; 
+}
+function clickButton(e){
+  if(e.target.id==='grid') getGridSize();
+  if(e.target.id==='color') getColor();
+  if(e.target.id==='clear') clearCells();
+}
+const btn = document.querySelectorAll(".btn");
+btn.forEach((button)=>button.addEventListener('click',clickButton));

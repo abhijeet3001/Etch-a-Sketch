@@ -3,6 +3,26 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: #a8a0e259;
 }
+.header {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bolder;
+  border-bottom: solid  #6d83a7d8 2px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  margin: 40 px 20px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid black 2px;
+  padding: 40px;
+}
 .square {
   height: 25px;
   width: 25px;

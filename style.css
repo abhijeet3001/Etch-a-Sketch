@@ -114,4 +114,8 @@ body {
   fill: #06f;
   background-color: antiquewhite;
 }
-
+.menu #color{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

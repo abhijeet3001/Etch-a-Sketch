@@ -24,7 +24,6 @@ function createGrid(gridSize) {
 createGrid(gridSize);
 
 function addColor(e) {
-  console.log(e.target.id);
   const box = document.querySelector(`#${e.target.id}`);
   box.style.backgroundColor = "black";
 }
@@ -47,10 +46,39 @@ function clearGrid() {
   squares.forEach((square) => (square.style.backgroundColor = "white"));
 }
 
+let isEraserOn = false;
+function eraseBox(btn) {
+  console.log(btn.target)
+  console.log(isEraserOn);
+  const squares = document.querySelectorAll(".square");
+  if (isEraserOn) {
+    btn.target.classList.toggle('active');
+    console.log("hello");
+    isEraserOn = false;
+    squares.forEach((square) => square.addEventListener("mouseover", addColor));
+
+    return;
+  }
+  btn.target.classList.toggle('active');
+
+  squares.forEach((square) =>
+    square.removeEventListener("mouseover", addColor)
+  );
+  squares.forEach((square) =>
+    square.addEventListener(
+      "mouseover",
+      (e) => (e.target.style.backgroundColor = "white")
+    )
+  );
+  isEraserOn = true;
+  return;
+}
+
 function clickButton(e) {
   if (e.target.id === "grid") getGridSize();
   if (e.target.id === "color") getColor();
   if (e.target.id === "clear") clearGrid();
+  if (e.target.id === "eraser") eraseBox(e);
 }
 
 const btn = document.querySelectorAll(".btn");

@@ -108,3 +108,10 @@ body {
     min-width: 170px;
   }
 }
+.active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+  background-color: antiquewhite;
+}
+

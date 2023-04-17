@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 let gridSize = 16;
+let myColor="black";
 
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize * gridSize; i++) {
@@ -25,7 +26,7 @@ createGrid(gridSize);
 
 function addColor(e) {
   const box = document.querySelector(`#${e.target.id}`);
-  box.style.backgroundColor = "black";
+  box.style.backgroundColor = myColor;
 }
 
 function getGridSize() {
@@ -73,6 +74,10 @@ function eraseBox(btn) {
   isEraserOn = true;
   return;
 }
+
+colorPicker = document.querySelector("#chooseColor");
+colorPicker.value = myColor;
+colorPicker.addEventListener("input", e=>myColor=e.target.value);
 
 function clickButton(e) {
   if (e.target.id === "grid") getGridSize();
